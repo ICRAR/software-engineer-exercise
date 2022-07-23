@@ -17,6 +17,7 @@
    for performance and readability
   1. Describe how you would go about
      increasing the performance.
+     - Use some build in Python
      What steps would you take?
      How do you determine what to improve?
   1. Try to increase the performance of both functions.
