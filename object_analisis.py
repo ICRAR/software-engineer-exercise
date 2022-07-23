@@ -58,3 +58,4 @@ def farthest(objects):
             return o
 
 print(farthest(json.loads(input)))
+
