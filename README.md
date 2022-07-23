@@ -17,9 +17,20 @@
    for performance and readability
   1. Describe how you would go about
      increasing the performance.
-     - Use some build in Python
+     #### How to increase the performance
+     - Use Built-In Functions
+     - Use Module Importing
+     - Reduce the computation
      What steps would you take?
+     #### Steps to increase the performance
+     - Build in function such as max
+     - Importing unittest module for test automation 
+     - Reducing calculation and reduce memory usage by using less for loop and logical condition
      How do you determine what to improve?
+     #### Determine what to improve
+     - Tidy up the code
+     - Save time, labor, cost when doing testing by automation and unittest.
+     - System perform respond faster because it use less memory and less computation needed
   1. Try to increase the performance of both functions.
      Use only built-in python modules and types,
      don't bother trying to use external packages
