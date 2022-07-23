@@ -1,3 +1,6 @@
+import json
+import sys
+
 def aboundant(objects):
     # asign initiate variables in one line
     sum_stars = sum_galaxies = sum_supernovae = sum_frbs = 0
@@ -23,30 +26,6 @@ def aboundant(objects):
     if max_count == sum_frbs:
         return 'frbs'
 
-input = """
-[
-    {
-        "type": "star",
-        "name": "alpha-centaurus",
-        "redshift": 0
-    },
-    {
-        "type": "nebula",
-        "name": "crab",
-        "redshift": 0
-    },
-    {
-        "type": "galaxy",
-        "name": "sombrero",
-        "redshift": 0
-    }
-]
-"""
-
-
-import json
-print(aboundant(json.loads(input)))
-
 
 def farthest(objects):
     # initiate value is the first object is highest to reduce calculation and logical condition
@@ -58,5 +37,61 @@ def farthest(objects):
         if o["redshift"] == highest_redshift:
             return o
 
-print(farthest(json.loads(input)))
 
+def main():
+    input = """
+    [
+        {
+            "type": "star",
+            "name": "alpha-centaurus",
+            "redshift": 0
+        },
+        {
+            "type": "nebula",
+            "name": "crab",
+            "redshift": 0
+        },
+        {
+            "type": "galaxy",
+            "name": "sombrero",
+            "redshift": 0
+        }
+    ]
+    """
+
+    input1 = """
+    [
+        {
+            "type": "frb",
+            "name": "crab",
+            "redshift": 0
+        }
+    ]
+    """
+
+    input2 = """
+    [
+        {
+            "type": "frb",
+            "name": "crab",
+            "redshift": 0
+        },
+        {
+            "type": "galaxy",
+            "name": "sombrero",
+            "redshift": 4
+        }
+    ]
+    """
+
+    print(aboundant(json.loads(input)))
+    print(farthest(json.loads(input)))
+
+    # little examples 
+    print(aboundant(json.loads(input1)))
+    print(farthest(json.loads(input2)))
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        main(int(sys.argv[1]))
+    main()
