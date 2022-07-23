@@ -37,7 +37,6 @@ class TestObjectAnalisis(unittest.TestCase):
         Expected result is the correct value.
         In order to pass the test, the actual should be equal to expected result
         """
-        print("hello")
         input = """
         [
             {
